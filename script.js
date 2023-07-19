@@ -1,4 +1,4 @@
-// 1
+// 1clea
 
 // function math() {
 //     let a = +prompt()
@@ -31,24 +31,24 @@ function min(...nums) {
     alert(minNum)
     for (let items of nums) {
         if (typeof items === 'number') {
-            if (items < minimal) {
+            if (items < minNum) {
                    minNum  = items
             }
         } else if (Array.isArray(items)) {
             for (let item of items) {
-                if (item < minimal) {
+                if (item < minNum) {
                         minNum = item
                 }
             }
         } else if (typeof items === 'object') {
             for (let key in items) {
-                if (items[key] < minimal) {
+                if (items[key] < minNum) {
                     minNum = items[key]
                 }
             }
         }
     }
-    return minimal
+    return minNum
 }
 
 console.log(min(1, 2));
